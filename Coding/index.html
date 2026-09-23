@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Vacation Hotel">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vacation Hotel | Luxury Stay & Experience</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="logo">
+                <i class="fa-solid fa-hotel">开拓</i> VACATION HOTEL
+            </a>
+            <nav class="nav-links">
+                <a href="#hero">Home</a>
+                <a href="#about">About</a>
+                <a href="#rooms">Rooms</a>
+                <a href="#amenities">Amenities</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <button class="btn btn-primary nav-btn" onclick="openBookingModal()">Book Now</button>
+        </div>
+    </header>
+
+    <section id="hero" class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="sub-title animate-up">WELCOME TO PARADISE</span>
+            <h1 class="main-title animate-up delay-1">Experience Ultimate Luxury & Comfort</h1>
+            <p class="hero-desc animate-up delay-2">Discover breathtaking ocean views, world-class amenities, and unforgettable moments at Vacation Hotel.</p>
+            <div class="hero-buttons animate-up delay-3">
+                <a href="#rooms" class="btn btn-primary">Explore Rooms</a>
+                <button class="btn btn-outline" onclick="openBookingModal()">Book Your Stay</button>
+            </div>
+        </div>
+        
+        <div class="quick-booking animate-up delay-4">
+            <div class="booking-item">
+                <label><i class="fa-regular fa-calendar"></i> Check-in</label>
+                <input type="date" id="hero-checkin">
+            </div>
+            <div class="booking-item">
+                <label><i class="fa-regular fa-calendar"></i> Check-out</label>
+                <input type="date" id="hero-checkout">
+            </div>
+            <div class="booking-item">
+                <label><i class="fa-solid fa-user-group"></i> Guests</label>
+                <select id="hero-guests">
+                    <option value="1">1 Guest</option>
+                    <option value="2" selected>2 Guests</option>
+                    <option value="3">3 Guests</option>
+                    <option value="4">4+ Guests</option>
+                </select>
+            </div>
+            <button class="btn btn-primary search-btn" onclick="openBookingModal()">Check Availability</button>
+        </div>
+    </section>
+
+    <div class="marquee" id="amenities">
+       <div class="marquee-track">
+          <span>Free WiFi</span><span>Ocean View</span><span>Pool</span><span>Breakfast Included</span><span>Spa &amp; Wellness</span><span>Airport Shuttle</span><span>Fitness Center</span><span>24/7 Front Desk</span>
+          <span>Free WiFi</span><span>Ocean View</span><span>Pool</span><span>Breakfast Included</span><span>Spa &amp; Wellness</span><span>Airport Shuttle</span><span>Fitness Center</span><span>24/7 Front Desk</span>
+          <span>Free WiFi</span><span>Ocean View</span><span>Pool</span><span>Breakfast Included</span><span>Spa &amp; Wellness</span><span>Airport Shuttle</span><span>Fitness Center</span><span>24/7 Front Desk</span>
+       </div>
+    </div>
+
+    <section id="about" class="section about-section">
+        <div class="container grid-2">
+            <div class="about-image-wrapper reveal-left">
+                <div class="image-card">
+                    <img src="./hotelextirior.jpg" alt="Vacation Hotel Exterior">
+                </div>
+                <div class="experience-badge">
+                    <span class="years">15+</span>
+                    <span class="text">Years of Excellence</span>
+                </div>
+            </div>
+            <div class="about-text reveal-right">
+                <span class="section-tag">ABOUT VACATION HOTEL</span>
+                <h2>Where Elegance Meets Extraordinary Hospitality</h2>
+                <p>Nestled along serene coastal waters, Vacation Hotel provides a modern sanctuary for travelers seeking relaxation, luxury, and world-class service. Our thoughtfully crafted suites and dedicated team ensure every moment of your stay is remarkable.</p>
+                
+                <div class="features-list">
+                    <div class="feature-item">
+                        <i class="fa-solid fa-water-ladder"></i>
+                        <div>
+                            <h4>Infinity Pool</h4>
+                            <p>Panoramic oceanfront swimming experience.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fa-solid fa-utensils"></i>
+                        <div>
+                            <h4>Fine Dining</h4>
+                            <p>Gourmet cuisines prepared by award-winning chefs.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="rooms" class="section rooms-section">
+        <div class="container">
+            <div class="section-header center reveal-up">
+                <span class="section-tag">ACCOMMODATIONS</span>
+                <h2>Luxury Rooms & Suites</h2>
+                <p>Select from our range of beautifully appointed quarters designed for maximum comfort.</p>
+            </div>
+
+            <div class="rooms-grid">
+            
+                <div class="room-card reveal-up">
+                    <div class="room-img">
+                        <img src="./standard.jpg" alt="Standard Room">
+                        <span class="price-badge">$120 <span>/ night</span></span>
+                    </div>
+                    <div class="room-info">
+                        <h3>Standard Room</h3>
+                        <p>A cozy and elegant space equipped with modern amenities and a king-sized bed.</p>
+                        <div class="room-amenities">
+                            <span><i class="fa-solid fa-wifi"></i> Free Wifi</span>
+                            <span><i class="fa-solid fa-tv"></i> Smart TV</span>
+                            <span><i class="fa-solid fa-snowflake"></i> AC</span>
+                        </div>
+                        <button class="btn btn-secondary room-btn" onclick="selectRoom('Standard Room', 120)">Select Room</button>
+                    </div>
+                </div>
+
+                <div class="room-card reveal-up delay-1">
+                    <div class="room-img">
+                        <img src="./deluxe.jpg" alt="Deluxe Room">
+                        <span class="price-badge">$220 <span>/ night</span></span>
+                    </div>
+                    <div class="room-info">
+                        <h3>Deluxe Room</h3>
+                        <p>Spacious accommodations featuring a ocean view balcony and luxurious bedding.</p>
+                        <div class="room-amenities">
+                            <span><i class="fa-solid fa-water"></i> Sea View</span>
+                            <span><i class="fa-solid fa-glass-water"></i> Mini Bar</span>
+                            <span><i class="fa-solid fa-bath"></i> Tub</span>
+                        </div>
+                        <button class="btn btn-secondary room-btn" onclick="selectRoom('Deluxe Room', 220)">Select Room</button>
+                    </div>
+                </div>
+
+                <div class="room-card reveal-up delay-2">
+                    <div class="room-img">
+                        <img src="./executive.jpg" alt="Executive Suite">
+                        <span class="price-badge">$380 <span>/ night</span></span>
+                    </div>
+                    <div class="room-info">
+                        <h3>Executive Suite</h3>
+                        <p>Luxury suite with a private living room, dining quarters, and premium lounge access.</p>
+                        <div class="room-amenities">
+                            <span><i class="fa-solid fa-couch"></i> Living Area</span>
+                            <span><i class="fa-solid fa-concierge-bell"></i> Service</span>
+                            <span><i class="fa-solid fa-square-parking"></i> Parking</span>
+                        </div>
+                        <button class="btn btn-secondary room-btn" onclick="selectRoom('Executive Suite', 380)">Select Room</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="amenities" class="section amenities-section">
+        <div class="container">
+            <div class="section-header center reveal-up">
+                <span class="section-tag">HOTEL SERVICES</span>
+                <h2>World-Class Amenities</h2>
+            </div>
+            <div class="amenities-grid">
+                <div class="amenity-box reveal-up">
+                    <i class="fa-solid fa-spa"></i>
+                    <h3>Luxury Spa & Wellness</h3>
+                    <p>Rejuvenate your senses with holistic treatments and massages.</p>
+                </div>
+                <div class="amenity-box reveal-up delay-1">
+                    <i class="fa-solid fa-utensils"></i>
+                    <h3>5-Star Restaurant</h3>
+                    <p>Indulge in exquisite gourmet meals crafted by top international chefs.</p>
+                </div>
+                <div class="amenity-box reveal-up delay-2">
+                    <i class="fa-solid fa-dumbbell"></i>
+                    <h3>Fitness Center</h3>
+                    <p>Stay active with state-of-the-art gym equipment and personal trainers.</p>
+                </div>
+                <div class="amenity-box reveal-up delay-3">
+                    <i class="fa-solid fa-martini-glass-citrus"></i>
+                    <h3>Rooftop Lounge</h3>
+                    <p>Enjoy signature cocktails with sweeping panoramic sunset views.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container footer-content">
+            <div class="footer-col">
+                <h3>VACATION HOTEL</h3>
+                <p>Providing unmatched hospitality, luxury, and memorable getaway experiences.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#rooms">Rooms & Rates</a></li>
+                    <li><a href="#amenities">Amenities</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <p><i class="fa-solid fa-location-dot"></i> 52B KAMPOT AVENUE</p>
+                <p><i class="fa-solid fa-phone"></i> +85593228104</p>
+                <p><i class="fa-solid fa-envelope"></i> info@vacationhotel.com</p>
+                <p><i class="fa-solid fa-user-graduate"></i> Developer: Mam SereyVathnak</p>
+                <p><i class="fa-solid fa-school"></i> Rupp Student</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2026 Vacation Hotel. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeBookingModal()">&times;</span>
+            <h2>Book Your Stay</h2>
+            <form id="bookingForm" onsubmit="handleBookingSubmit(event)">
+                <div class="form-group">
+                    <label>Selected Room</label>
+                    <select id="modalRoomType" required>
+                        <option value="Standard Room">Standard Room ($120/night)</option>
+                        <option value="Deluxe Room">Deluxe Room ($220/night)</option>
+                        <option value="Executive Suite">Executive Suite ($380/night)</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Check-in Date</label>
+                        <input type="date" id="modalCheckin" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Check-out Date</label>
+                        <input type="date" id="modalCheckout" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" placeholder="Vacation Hotel" required>
+                </div>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" placeholder="vacationhotel@example.com" required>
+                </div>
+                <button type="submit" class="btn btn-primary full-width">Confirm Reservation</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
